@@ -33,7 +33,7 @@ def main():
             print("Invalid input. Try again.")
             outputChoice = input("Enter 1 or 2: ")
 
-    #result = slides.examineLive() if lectureType == '1' else slides.examineVideo()
+    result = slides.liveFeed() if lectureType == '1' else slides.videoFeed()
             
 if __name__ == "__main__":
     main()
