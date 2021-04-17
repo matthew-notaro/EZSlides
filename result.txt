@@ -1,0 +1,15 @@
+Non-GUI Abstract Classes
+
+¢ Example: java.ut11.Calendar
+
+— Provides methods to convert between specific
+instant in time and calendar attributes year, day,
+month, etc.
+
+— Java.util.GregorianCalendar is a concrete
+subclass of Calendar
+
+— Static method Calendar.getInstance()
+returns calendar instance for current time with
+default locale (US — Gregorian calendar)
+
