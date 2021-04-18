@@ -62,7 +62,7 @@ def getCoordinates():
     cv2.imshow("IMAGE", image)
 
     k = cv2.waitKey(0) & 0xFF
-    if k == ord('c'):
+    if k == 27:
         x1 = input("x1? ")
         x2 = input("x2? ")
         y1 = input("y1? ")
