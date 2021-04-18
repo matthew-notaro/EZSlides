@@ -1,15 +1,14 @@
-Non-GUI Abstract Classes
+For instance, we might group actions taken simultaneously in
+parentheses.
 
-¢ Example: java.ut11.Calendar
+As an example, suppose an outcome of a dynamic game is
+X(XYX)(XZ). We would interpret that as meaning, “in this outcome,
+the player who went first chose action X, with no other player choosing
+anything simultaneously; after that, three players made choices
+simultaneously, with two of those players choosing action X and the
+third choosing action Y; then two players made choices simultaneously,
+with one of them choosing action X and the other choosing action Z;
+then the game ended.”
 
-— Provides methods to convert between specific
-instant in time and calendar attributes year, day,
-month, etc.
-
-— Java.util.GregorianCalendar is a concrete
-subclass of Calendar
-
-— Static method Calendar.getInstance()
-returns calendar instance for current time with
-default locale (US — Gregorian calendar)
+ 
 

@@ -5,7 +5,7 @@ import time
 import imagehash
 import numpy as np
 #import pyautogui
-
+import analyze
 from PIL import Image
 from moviepy.editor import *
 
@@ -174,7 +174,12 @@ class Slides:
 
         cv2.destroyAllWindows()
 
+# def analyzeImages():
+#     for imagePath in os.listdir(slidesDir):
+#         pathFromSlides = os.path.join(slidesDir, imagePath)
+#         imageFromSlides = cv2.imread(path,0)
+#         analyze.selectPixels(pathFromSlides, imageFromSlides)
 
-
-vid = Slides("../media/test lecture.mp4")
-vid.videoFeed()
+# vid = Slides("../media/test lecture.mp4")
+# vid.videoFeed()
+analyze.analyzeImages()
