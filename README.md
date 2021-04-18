@@ -1,10 +1,10 @@
 # EZSlides
 
 ## Inspiration
-Have you ever taken a class where your professor speeds through slideshows without stopping? Have your professors 
+Have you ever taken a class where your professor speeds through slideshows without stopping? Do your professors ever present you with walls of text, without any time to copy it down? Taking word-for-word notes can be difficult in an online environment, especially through the lenses of accessibility. If only there were a way to automatically copy what's already there, without the hassle of filtering which information is relevant or rushing to finish typing.
 
 ## What it does
-EZSlides is a program that processes either pre-recorded or live lectures and extracts the text from the video or screen for you to include in your notes! Simply crop the video to just include the text or select a region of your screen to record. You can even save the output to a text file or copy each slide directly to your clipboard to seamlessly paste into your favorite editor.
+EZSlides is a program that processes either pre-recorded or live lectures and extracts the text from the video or screen for you to include in your notes! Simply crop the video to just include the text or select a region of your screen to record. You can even save the output to a text file or copy each slide directly to your clipboard to seamlessly paste into your favorite editor. As a result, online learning is made more accessible, efficient, and convenient to all.
 
 ## How we built it
 To build EZSlides, we used Python 3 alongside the OpenCV, Pillow, ImageHash, PyAutoGUI, Python-tesseract, and Pyperclip libraries.
@@ -22,4 +22,4 @@ We are proud of waking up this morning and motivating each other to not only par
 We learned that OpenCV is a pain but PyTesseract is pretty nifty. 
 
 ## What's next for EZSlides
-As mentioned earlier, more intuitive controls especially when cropping should be on their way maybe sometime in the future. We also talked about implementing a multithreaded approach to checking if a slide already exists which could greatly decrease processing time for long lectures but neither of us have worked with multithreading in Python before and we both agreed today was not the day to learn it. Finally, and probably most importantly, EZSlides cannot process images and diagrams every well, and by very well we mean not at all. We would have to brainstorm a bit more to determine an algorithm to detect these images or design a seamless way for the user to manually include these. 
+As mentioned earlier, more intuitive controls especially when cropping should be on their way maybe sometime in the future. Not only would the interface be made more appealing and be easier to follow, but it would also have positive implications on the accessibility of the program. We also talked about implementing a multithreaded approach to checking if a slide already exists which could greatly decrease processing time for long lectures but neither of us have worked with multithreading in Python before and we both agreed today was not the day to learn it. Finally, and probably most importantly, EZSlides cannot process images and diagrams every well, and by very well we mean not at all. We would have to brainstorm a bit more to determine an algorithm to detect these images or design a seamless way for the user to manually include these.
