@@ -5,7 +5,7 @@ import time
 import imagehash
 import numpy as np
 
-import pyautogui
+# import pyautogui
 # import pyscreenshot as ImageGrab
 
 # import analyze
@@ -76,6 +76,7 @@ class Slides:
         for i in range(len(frame_list)):
             cv2.imwrite("../media/slides/temp.png", frame_list[i])
             curr_hash = imagehash.average_hash(Image.open("../media/slides/temp.png"))
+            
             hash.append(curr_hash)
 
         # Store frames with enough change from previous frame in selected_frames
@@ -130,68 +131,48 @@ class Slides:
     # If similar enough, discards current image
     # If different enough, saves and indexes new image 
     def liveFeed(self):
-
-        # Make sure videoPath == None
-        if self.videoPath != None:
-            print("something's wrong I can feel it")
-            return
         
         # Delay between screenshots (in seconds)
-        delay = 1
-
-        # Counter - tracks unique slide number
-        slideNum = 1
+        delay = 2
 
         # Lists to keep track of seen frames and respective hashes
-        frame_list = []
+        sc_list = []
         hash = []
 
+        # Counter - keep track of sc's to write to disk
+        sc_num = 0
+
         # Loop and wait for a new slide
-        # while True:
-        #     sc = ImageGrab.grab()
+        while True:
+            # Take screenshot, convert, and crop
+            image = pyautogui.screenshot()
+            image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+            #image = image.crop((self.x1, self.y1, self.x2, self.y2))
+   
+            # Write sc to the disk to hash it
+            cv2.imwrite("media/live/temp.png", image)
+            curr_hash = imagehash.average_hash(Image.open("../media/live/temp.png"))
 
-        sc = ImageGrab.grab()
-        sc.save("idk.png")
-
-
-
-
-        # # Frame extractor loop
-        # while True:
-        #     # Takes next screenshot and converts to writable format
-        #     #sc = pyautogui.screenshot()
-        #     #sc = cv2.cvtColor(np.array(sc), cv2.COLOR_RGB2BGR)
-
-        #     # Save current sc to disk and hash it
-        #     cv2.imwrite("../media/slides/slide%d.jpg" % slideNum, sc)
-        #     hashCurr = imagehash.average_hash(Image.open("../media/slides/slide%d.jpg" % (slideNum)))
-
-        #     # Compare current sc to previous slides to check for repeats
-        #     temp = slideNum - 1
-        #     while temp >= 1:
-        #         hashIter = imagehash.average_hash(Image.open("../media/slides/slide%d.jpg" % (temp)))
-
-        #         # If different slide, move onto previous slide
-        #         if (hashCurr - hashIter) >= 5:
-        #             temp -= 1
-
-        #         # If repeated slide, delete current slide and read in next one
-        #         else:
-        #             os.remove("../media/slides/slide%d.jpg" % (slideNum))
-        #             break
+            # Compare to previous sc's - backwards iteration
+            uniqueSC = True
+            for i in range(sc_num - 1, -1, -1):
+                # If found matching slide, 
+                if(abs(curr_hash - hash[i]) == 0)
+                    uniqueSC = False
+                    break
             
-        #     # If current slide if unique, increment slideNum
-        #     # Catches 1st screenshot case and ensures it always gets written
-        #     if temp <= 1:
-        #         slideNum += 1
-        
-        # print("ending video processing...")
+            # If unique, add image and hash to lists, write to disk
+            if uniqueSC:
+                sc_list.append(image)
+                hash.append(curr_hash)
+                sc_num += 1
+            
+            # Take a screenshot every X seconds
+            time.sleep(delay)
 
-        # cv2.destroyAllWindows()
 
-# vid = Slides("../media/test lecture.mp4")
+# vid = Slides("../media/test lecture.mp4", [[1,2],[3,4]])
 # vid.videoFeed()
-# analyze.analyzeImages()
 
 live = Slides(None, [[1,2],[3,4]])
 live.liveFeed()
