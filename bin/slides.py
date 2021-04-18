@@ -145,7 +145,8 @@ class Slides:
         frame_list = []
         hash = []
 
-        # 
+        # Loop and wait for a new slide
+        while True:
 
 
 

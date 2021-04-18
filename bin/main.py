@@ -1,17 +1,24 @@
 import analyze
 import slides
+import os
 
 def main():
     print("Welcome to NAME! Are you capturing from a live lecture or a pre-recorded video?")
     print("1: Live lecture")
     print("2: Pre-recorded video")
     lectureType = input("Enter 1 or 2: ")
+
+    path = None
     while True:
         if(lectureType == '1'):
             print("NAME will capture from your screen.")
             break
         elif(lectureType == '2'):
             print("NAME will capture from the video file.")
+            while True:
+                path = input("Please enter a valid video path.")
+                if os.path.isfile(path)
+                    break
             break
         else:
             print("Invalid input. Try again.")
@@ -32,6 +39,18 @@ def main():
         else:
             print("Invalid input. Try again.")
             outputChoice = input("Enter 1 or 2: ")
+
+    cropCoords = analyze.analyzeImages()
+
+    if lectureType == '1':        
+        live = slides(path, cropCoords)
+        live.liveFeed()
+
+    else:
+        vid = slides(path, cropCoords)
+        vid.videoFeed()
+        analyze.
+
 
     #result = slides.liveFeed() if lectureType == '1' else slides.videoFeed()
             
