@@ -67,21 +67,24 @@ class Slides:
             success, frame = vidObj.read()
             totalFrames += 1
 
-        # Crop all frames to desired dimensions
-        for i in range(len(frame_list)):
-            frame_list[i] = frame_list[i].crop((self.x1, self.y1, self.x2, self.y2))
-
         # Writes all frames to calculate each frame's image hash and appends to hash
         hash = []
+        crop_frames = []
         for i in range(len(frame_list)):
             cv2.imwrite("media/slides/temp.png", frame_list[i])
-            curr_hash = imagehash.average_hash(Image.open("media/slides/temp.png"))
+            pilImage = Image.open("media/slides/temp.png")
+            pilImage = pilImage.crop((self.x1, self.y1, self.x2, self.y2))
+            pilImage2= cv2.cvtColor(np.array(pilImage),cv2.COLOR_RGB2BGR)
+            # writing it to the disk using opencv
+            cv2.imwrite("media/all/crop%d.png" % i, pilImage2)
+            curr_hash = imagehash.average_hash(pilImage)
             
+            crop_frames.append(pilImage)
             hash.append(curr_hash)
 
         # Store frames with enough change from previous frame in selected_frames
         # Start with frame_list[0] - append the next, not the current
-        selected_frames = [frame_list[0]]
+        selected_frames = [crop_frames[0]]
         selected_hashes = [hash[0]]
 
         for i in range(len(hash) - 1):
@@ -94,9 +97,9 @@ class Slides:
                 selected_frames.append(frame_list[i+1])
                 selected_hashes.append(hash[i+1])
 
-        # for i, frame in enumerate(selected_frames):
-        #     cv2.imwrite("media/slides/{}.png".format(i), frame)
-        
+        for i, frame in enumerate(selected_frames):
+            frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
+            cv2.imwrite("media/slides/{}.png".format(i), frame)
 
         # Ensured selected frames are not repeated
         selected_frames2 = []
@@ -117,6 +120,7 @@ class Slides:
                 selected_frames2.append(selected_frames[i])
 
         for i, frame in enumerate(selected_frames2):
+            frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
             cv2.imwrite("media/slides/select2{}.png".format(i), frame)
 
         # Set slideCount to easy iteration through the slides
@@ -147,12 +151,12 @@ class Slides:
             # Take screenshot, convert, and crop
             image = pyautogui.screenshot()
             print("shot bam bam")
-            image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+            # image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
             image = image.crop((self.x1, self.y1, self.x2, self.y2))
    
             # Write sc to the disk to hash it
-            cv2.imwrite("media/live/temp.png", image)
-            curr_hash = imagehash.average_hash(Image.open("media/live/temp.png"))
+            # cv2.imwrite("media/live/temp.png", image)   Image.open("media/live/temp.png")
+            curr_hash = imagehash.average_hash(image)
             print("hashy")
 
             # Compare to previous sc's - backwards iteration
@@ -178,5 +182,15 @@ class Slides:
 # vid = Slides("media/test lecture.mp4", [[1,2],[3,4]])
 # vid.videoFeed()
 
-live = Slides(None, [[1,2],[3,4]])
-live.liveFeed()
+# live = Slides(None, [[1,2],[3,4]])
+# live.liveFeed()
+
+
+# x1 = int((int(4)/(1900/200))*1900)
+# x2 = int((int(10)/(1900/200))*1900)
+# y1 = int((int(4)/(1000/150))*1000)
+# y2 = int((int(9)/(1000/150))*1000)
+
+
+# vid = Slides("media/test lecture.mp4", [[x1,y1],[x2,y2]])
+# vid.videoFeed()
