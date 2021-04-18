@@ -62,7 +62,7 @@ def getCoordinates():
     cv2.imshow("IMAGE", image)
 
     k = cv2.waitKey(0) & 0xFF
-    if k == ord('c'):
+    if k == 27:
         x1 = input("x1? ")
         x2 = input("x2? ")
         y1 = input("y1? ")
@@ -73,6 +73,7 @@ def getCoordinates():
         y1 = int((int(y1)/(height/GRID_SIZE_H))*height)
         y2 = int((int(y2)/(height/GRID_SIZE_H))*height)
 
+        # print(x1, y1, x2,y2)
         coordinates = [(x1, y1), (x2, y2)]
         # cv2.destroyAllWindows()
         return coordinates

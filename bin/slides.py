@@ -5,10 +5,10 @@ import time
 import imagehash
 import numpy as np
 
-# import pyautogui
+import pyautogui
 # import pyscreenshot as ImageGrab
 
-# import analyze
+import analyze
 from PIL import Image
 from moviepy.editor import *
 
@@ -97,9 +97,9 @@ class Slides:
                 selected_frames.append(crop_frames[i+1])
                 selected_hashes.append(hash[i+1])
 
-        for i, frame in enumerate(selected_frames):
-            frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
-            cv2.imwrite("media/slides/select{}.png".format(i), frame)
+        # for i, frame in enumerate(selected_frames):
+        #     frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
+        #     cv2.imwrite("media/slides/select{}.png".format(i), frame)
 
         # Ensured selected frames are not repeated
         selected_frames2 = []
@@ -126,7 +126,7 @@ class Slides:
 
         # Set slideCount to easy iteration through the slides
         self.slideCount = len(selected_frames2)
-
+        os.remove('media/slides/temp.png')
         vidObj.release()
         cv2.destroyAllWindows()
 
@@ -151,14 +151,14 @@ class Slides:
         while True:
             # Take screenshot, convert, and crop
             image = pyautogui.screenshot()
-            print("shot bam bam")
+            # print("shot bam bam")
             # image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
             image = image.crop((self.x1, self.y1, self.x2, self.y2))
    
             # Write sc to the disk to hash it
             # cv2.imwrite("media/live/temp.png", image)   Image.open("media/live/temp.png")
             curr_hash = imagehash.average_hash(image)
-            print("hashy")
+            # print("hashy")
 
             # Compare to previous sc's - backwards iteration
             uniqueSC = True
@@ -173,7 +173,7 @@ class Slides:
                 sc_list.append(image)
                 hash.append(curr_hash)
                 analyze.analyzeImage(image)
-                print("a d d")
+                # print("a d d")
                 sc_num += 1
             
             # Take a screenshot every X seconds

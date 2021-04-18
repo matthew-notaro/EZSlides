@@ -5,4 +5,6 @@ bin/__pycache__/*
 
 # Project Files
 media/slides/*
-media/add/*
+media/all/*
+media/live/*
+result.txt
