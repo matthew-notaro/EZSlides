@@ -9171,4 +9171,1480 @@ its beginning to its completion
 any proper subhistory
 
 --players’ payoffs at each outcome
+ 
+
+ee ee ee
+PCM We Se er ee et er ee eee ea) een ee
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 1/48 | - we +) OD
+
+A defining feature of the kind of dynamic game we’ve studied so far,
+dynamic games of perfect information, is that players’ actions are never
+taken simultaneously—all actions are sequential.
+
+We are ready to graduate to a more general concept of a dynamic game,
+in which some actions by players can be chosen simultaneously.
+
+Of course, not all actions are simultaneous, or else it would be a regular
+multaneous-move game, not a dynamic game.
+
+ 
+
+an a] oe ee ee ee a ee Rocce
+
+ 
+
+i)
+
+*@
+ 
+
+eS
+
+¢
+
+ 
+
+SU CUS uC RCT
+
+ae ee
+
+ 
+
+Expanded Dynamic Games:
+Allowing for Simultaneous
+Moves
+
+ 
+
+(ee ee
+
+ 
+MN
+ 
+
+bo
+u
+@
+J
+Fl
+p
+|
+E
+Cy
+C
+a
+&
+
+ 
+
+ee eer re ay Pete er ee ene
+
+Expanded Dynamic Games: Allowing for Simultaneous Moves 7/48 | - wx +) O
+
+Adjustment to outcomes
+
+For instance, we might group actions taken simultaneously in
+parentheses.
+
+As an example, suppose an outcome of a dynamic game is
+X(XYX)(XZ). We would interpret that as meaning, “in this outcome,
+the player who went first chose action X, with no other player choosing
+anything simultaneously; after that, three players made choices
+simultaneously, with two of those players choosing action X and the
+third choosing action Y; then two players made choices simultaneously,
+with one of them choosing action X and the other choosing action Z;
+then the game ended.”
+
+Adjustment to outcomes
+
+J
+
+ 
+
+ 
+ 
+     
+
+Adjustment to outcomes
+
+With no simultaneous actions, an outcome is interpreted as a set of
+actions that were taken in sequence. For instance, if XYZX is an
+outcome of a dynamic game of perfect information, that means that one
+way for the game to be played is, “the player who goes first chooses
+action X, then a player chooses action Y, then a player chooses action Z,
+then a player chooses action X, at which point the game ends.”
+ee eet
+
+eee
+
+ 
+
+ 
+
+ 
+
+Se eee ey
+
+eI DSL eC 2748 |- we +/| &
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defi
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+on a a ecco
+
+ 
+
+re
+
+»@
+ 
+
+ee eee ee
+
+PoC Wee eee ee eee
+
+ 
+
+wee an) me ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - we +) Od + 6
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+e#om @@Q6OBBREB BC a re Wi
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function. b
+
+ 
+ 
+
+ee eee ee ed
+
+Pe Me ene ee et eee ee ewe) Pete ering a oe oe oe se
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 4/48 | - we +) OD + 6
+
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function. b
+
+Adjustment to outcomes
+
+ 
+
+Yer ae ee ee ee Recs
+ 
+
+ee eee ee
+
+PoC Wee eee ee eee
+
+ 
+
+wee an) me @= ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - we +) Od + 6
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+e#om @@Q6OBBREB BC a re Wi
+ 
+
+ee eee ee ed
+
+Pe Me ene ee et eee ee ewe) Pete ering a oe oe oe se
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 4/48 | - we +) OD + 6
+
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function. b
+
+Adjustment to outcomes
+
+ 
+
+Yer ae ee ee ee Recs
+ 
+
+H
+a
+
+ 
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 5/48 | - we +) OD
+
+le
+a
+
+Adjustment to outcomes
+
+With no simultaneous actions, an outcome is interpreted as a set of
+actions that were taken in sequence. For instance, if XYZX is an
+outcome of a dynamic game of perfect information, that means'that one
+way for the game to be played is, “the player who goes first chooses
+action X, then a player chooses action Y, then a player chooses action Z,
+then a player chooses action X, at which point the game ends.”
+
+Adjustment to outcomes
+
+ 
+
+ 
+
+i a a a
+
+ 
+
+Se eee ea ee eae ee ey an) Ce
+ 
+
+ee eee ee
+
+PoC Wee eee ee eee
+
+ 
+
+wee an) me ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - wm +) Od + 6
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined b
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+Een a oo i TET aI
+ 
+
+H
+a
+
+ 
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 5/48 | - we +) OD
+
+le
+a
+
+Adjustment to outcomes
+
+With no simultaneous actions, an outcome is interpreted as a set of
+actions that were taken in sequence. For instance, if XYZX is an
+outcome of a dynamic game of perfect information, that means'that one
+way for the game to be played is, “the player who goes first chooses
+action X, then a player chooses action Y, then a player chooses action Z,
+then a player chooses action X, at which point the game ends.”
+
+Adjustment to outcomes
+
+ 
+
+ 
+
+i a a a
+
+ 
+
+Se eee ea ee eae ee ey an) Ce
+ 
+
+H
+a
+
+ 
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 6/48 | - wm +) OD
+
+le
+a
+
+Adjustment to outcomes
+
+For instance, we might group actions taken simultaneously in
+parentheses.
+
+As an example, suppose an outcome of a dynamic game is
+X(XYX)(XZ). We would interpret that as meaning, “in this outcome,
+the player who went first chose action X, with no other player choosing
+anything simultaneously; after that, three players made choices
+simultaneously, with two of those players choosing action X and the
+third choosing action Y; then two players made choices simultaneously,
+with one of them choosing action X and the other choosing action Z;
+then the game ended.”
+
+Adjustment to outcomes
+
+ 
+
+ 
+
+an a a a
+
+ 
+
+Se eee ea ee eae ee ey an) Ce
+ 
+
+ee eee ee
+
+PoC Wee eee ee eee
+
+ 
+
+wee an) me @= ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - we +) Od + 6
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+e#om @@Q6OBBREB BC a re Wi
+ 
+
+H
+a
+
+ 
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 6/48 | - wm +) OD
+
+le
+a
+
+Adjustment to outcomes
+
+For instance, we might group actions taken simultaneously in
+parentheses.
+
+As an example, suppose an outcome of a dynamic game is
+X(XYX)(XZ). We would interpret that as meaning, “in this outcome,
+the player who went first chose action X, with no other player choosing
+anything simultaneously; after that, three players made choices
+simultaneously, with two of those players choosing action X and the
+third choosing action Y; then two players made choices simultaneously,
+with one of them choosing action X and the other choosing action Z;
+then the game ended.”
+
+Adjustment to outcomes
+
+ 
+
+ 
+
+an a a a
+
+ 
+
+Se eee ea ee eae ee ey an) Ce
+ 
+   
+  
+
+Adjustments to the Player Function
+
+    
+ 
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+b
+
+One reason is that the structure of histories of the game is different.
+ 
+   
+
+Adjustment to outcomes
+
+  
+
+Allowing these groupings of consecutive actions to show simultaneity is
+the only change we need to make to our notion of outcomes.
+b
+ 
+
+ee eee ee
+
+Poe Wer Se ee eee ee et ce ee eo ey
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 6/48 | - wm +) OD
+
+Adjustment to outcomes
+
+With the possibility of simultaneous moves, outcomes are still lists of
+actions, and it is still true that if one action is taken before another, the
+first action appears before the second in the list. However, some actions
+in the list may have been taken simultaneously.
+
+In this case, we indicate this in our list by grouping actions taken
+simultaneously together, using some kind of notation.
+
+Adjustment to outcomes
+
+Yer ae ee ee ee Recs
+
+ 
+ 
+
+ee eee ee
+
+PoC Wee eee ee eee
+
+ 
+
+wee an) me @= ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - we +) Od + 6
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined
+
+--the set of players 1
+
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+e#om @@Q6OBBREB BC a re Wi
+ 
+
+ee eee ee
+
+Poe Wer Se ee eee ee et ce ee eo ey
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 6/48 | - wm +) OD
+
+Adjustment to outcomes
+
+With the possibility of simultaneous moves, outcomes are still lists of
+actions, and it is still true that if one action is taken before another, the
+first action appears before the second in the list. However, some actions
+in the list may have been taken simultaneously.
+
+In this case, we indicate this in our list by grouping actions taken
+simultaneously together, using some kind of notation.
+
+Adjustment to outcomes
+
+Yer ae ee ee ee Recs
+
+ 
+ 
+
+ee eee ee ed
+
+Pe ME ne ee et eee eee wey Pete etn a on oe aoe sa
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 5/48 | - we +) Od + 6
+
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function.
+
+Adjustment to outcomes
+
+ 
+
+ 
+
+Ce ee ee ee, ee 2
+
+   
+ 
+
+ee eee ee
+
+PoC Wee eee ee eee
+
+ 
+
+wee an) me ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - wm +) Od + 6
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined b
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+Een a oo i TET aI
+ 
+
+ee eee ee ed
+
+Pe ME ne ee et eee eee wey Pete etn a on oe aoe sa
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 5/48 | - we +) Od + 6
+
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function.
+
+Adjustment to outcomes
+
+ 
+
+ 
+
+Ce ee ee ee, ee 2
+
+   
+ 
+
+ee eee ee
+
+Poe We ee eee ee eee
+
+ 
+
+wee an) me @= ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - we +) Od + 6
+
+Allowing for simultaneous moves will require us to change
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+Coe ee oe ee oe eg er a a ee Al
+
+ 
+ee eee ee
+
+ds
+
+ 
+
+ee eee ee
+
+ 
+
+ 
+
+Se eee ey
+
+DL LCL 1748 | - wx +/| &
+
+A defining feature of the kind of dynamic game we’ve studied so far,
+dynamic games of perfect information, is that players’ actions are never
+taken simultaneously—all actions are sequential.
+
+We are ready to graduate to a more general concept of a dynamic game,
+in which some actions by players can be chosen simultaneously.
+
+Of course, not all actions are simultaneous, or else it would be a regular
+simultaneous-move game, not a dynamic game.
+
+ 
+
+ae oe (ee Rocca
+
+re
+x
+
+ce ae
+ 
+
+ee eee ee
+
+Poe We ee eee ee eee
+
+ 
+
+wee an) me @= ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - we +) Od + 6
+
+Allowing for simultaneous moves will require us to change
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+Coe ee oe ee oe eg er a a ee Al
+
+ 
+ 
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 5/48 | - we +) Od
+
+ 
+
+ 
+
+H
+a
+Ba
+
+Se eee ee ee Ley eee ee ee
+
+an) Ce ee
+
+le
+a
+
+Adjustment to outcomes
+
+With no simultaneous actions, an outcome is interpreted as a set of
+actions that were taken in sequence. For instance, if XYZX is an
+outcome of a dynamic game of perfect information, that means that one
+way for the game to be played is, “the player who goes first chooses
+action X, then a player chooses action Y, then a player chooses action Z,
+then a player chooses action X, at which point the game ends.”
+
+Adjustment to outcomes
+
+ 
+
+i a a a
+
+ 
+MN
+ 
+
+Adjustments to the Player Function
+
+The idea of a history of the game is that it is any record of actions that
+could be taken to start a play of the game, up to a certain point, but not
+necessarily to finish it.
+
+In a dynamic game of perfect information, that is simply any sequence
+of actions that appears at the beginning of an outcome.
+
+Going back to our prior example, if XYZX is an outcome of a dynamic
+game, then X, XY, and XYZ are all histories of the game (and @, of
+course).
+ 
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 5/48 | - we +) Od
+
+ 
+
+ 
+
+H
+a
+Ba
+
+Se eee ee ee Ley eee ee ee
+
+an) Ce ee
+
+le
+a
+
+Adjustment to outcomes
+
+With no simultaneous actions, an outcome is interpreted as a set of
+actions that were taken in sequence. For instance, if XYZX is an
+outcome of a dynamic game of perfect information, that means that one
+way for the game to be played is, “the player who goes first chooses
+action X, then a player chooses action Y, then a player chooses action Z,
+then a player chooses action X, at which point the game ends.”
+
+Adjustment to outcomes
+
+ 
+
+i a a a
+
+ 
+ 
+
+ee ee ee
+
+ds
+
+ 
+
+eee Se eee ey
+
+(ee ee ee eer
+
+ 
+
+DSL eC 2748 |- we +/| &
+
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function.
+
+Adjustment to outcomes
+
+a ee ee i J ee a:
+
+ 
+
+ 
+ees
+
+a
+
+ 
+
+ca
+
+ 
+
+Expanded Dynamic Games: Allowing for Simultaneous Moves
+
+ee | Loe i |
+
+ 
+
+ec en, ae >)
+
+Expanded Dynamic Games:
+Allowing for Simultaneous
+Moves
+
+ 
+
+( ee
+
+ 
+ 
+
+ee ee ee
+
+ds
+
+ 
+
+eee Se eee ey
+
+(ee ee ee eer
+
+ 
+
+DSL eC 2748 |- we +/| &
+
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function.
+
+Adjustment to outcomes
+
+a ee ee i J ee a:
+
+ 
+
+ 
+ 
+
+ee ee ee
+
+Ce
+
+ 
+
+De ete ee ee ee ee ee 2
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 97/48 | - we +) Od
+
+Adjustments to the Player Function
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+t
+
+One reason is that the structure of histories of the game is different.
+
+Adjustments to the Player Function
+
+ 
+
+ee | Lee, eee
+
+ 
+ 
+     
+   
+ 
+    
+
+Adjustment to outcomes
+
+With the possibility of simultaneous moves, outcomes are still lists of
+actions, and it is still true that if one action is taken before another, the
+first action appears before the second in the list. However, some actions
+in the list may have been taken simultaneously.
+
+In this case, we indicate this in our list by grouping actions taken
+simultaneously together, using some kind of notation.
+ 
+
+ee ee ee
+
+Ce
+
+ 
+
+De ete ee ee ee ee ee 2
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 97/48 | - we +) Od
+
+Adjustments to the Player Function
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+t
+
+One reason is that the structure of histories of the game is different.
+
+Adjustments to the Player Function
+
+ 
+
+ee | Lee, eee
+
+ 
+ 
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined by:
+--the set of players
+
+--the set of outcomes, defined as sequences of actions that take the game from
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+ 
+
+A defining feature of the kind of dynamic game we’ve studied so far,
+dynamic games of perfect information, is that players’ actions are never
+taken simultaneously—all actions are sequential.
+
+We are ready to graduate to a more general concept of a dynamic game,
+in which some actions by players can be chosen simultaneously.
+
+Of course, not all actions are simultaneous, or else it would be a regular
+simultaneous-move game, not a dynamic game.
+ 
+
+ee eee ee
+
+ds
+
+(om:
+
+ 
+
+De ete ee ee ee ee ee
+
+SU RC eC eC 8748 |—- wx + | &)
+
+Adjustment to outcomes
+
+Allowing these groupings of consecutive actions to show simultaneity is
+the only change we need to make to our notion of outcomes.
+t
+
+Adjustments to the Player Function
+
+ 
+
+ne Le, ee
+
+ 
+ 
+   
+
+    
+
+Adjustment to outcomes
+
+For instance, we might group actions taken simultaneously in
+parentheses.
+
+b
+
+As an example, suppose an outcome of a dynamic game is
+X(XYX)(XZ). We would interpret that as meaning, “in this outcome,
+the player who went first chose action X, with no other player choosing
+anything simultaneously; after that, three players made choices
+simultaneously, with two of those players choosing action X and the
+third choosing action Y; then two players made choices simultaneously,
+with one of them choosing action X and the other choosing action Z;
+then the game ended.”
+ 
+
+ee eee ee
+
+ds
+
+(om:
+
+ 
+
+De ete ee ee ee ee ee
+
+SU RC eC eC 8748 |—- wx + | &)
+
+Adjustment to outcomes
+
+Allowing these groupings of consecutive actions to show simultaneity is
+the only change we need to make to our notion of outcomes.
+t
+
+Adjustments to the Player Function
+
+ 
+
+ne Le, ee
+
+ 
+ 
+
+ee ee ee
+
+Ce
+
+ 
+
+De ete ee ee ee ee ee 2
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 97/48 | - we +) Od
+
+Adjustments to the Player Function
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+t
+
+One reason is that the structure of histories of the game is different.
+
+Adjustments to the Player Function
+
+ 
+
+ee | Lee, eee
+
+ 
+ 
+   
+
+    
+
+Adjustment to outcomes
+
+For instance, we might group actions taken simultaneously in
+parentheses.
+
+b
+
+As an example, suppose an outcome of a dynamic game is
+X(XYX)(XZ). We would interpret that as meaning, “in this outcome,
+the player who went first chose action X, with no other player choosing
+anything simultaneously; after that, three players made choices
+simultaneously, with two of those players choosing action X and the
+third choosing action Y; then two players made choices simultaneously,
+with one of them choosing action X and the other choosing action Z;
+then the game ended.”
+ 
+
+ee eee ee ar al
+
+Pe ME ne ee et eee eee wey Pete etn a on oe aoe sa
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 10/48 | — 10x +) G) & 2a as
+
+Adjustments to the Player Function
+
+The idea of a history of the game is that it is any record of actions that
+could be taken to start a play of the game, up to a certain point, but not
+necessarily to finish it.
+
+Ina dynamic game of perfect information, that is simply any sequence
+of actions that appears at the beginning of an outcome.
+
+Going back to our prior example, if XYZX is an outcome of a dynamic
+game, then X, XY, and XYZ are all histories of the game (and @, of
+course).
+
+Adjustments to the Player Function
+
+ 
+
+CC a a
+
+ 
+MN
+ 
+   
+
+Expanded Dynamic Games:
+Allowing for Simultaneous
+Moves
+
+  
+ 
+
+ee eee ee
+
+Ce
+
+ 
+
+De ee eee ee ee ee ee ee
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 97/48 | - wm +) Od
+
+Adjustments to the Player Function
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+
+One reason is that the structure of histories of the game is different.
+
+Adjustments to the Player Function
+
+ 
+ 
+   
+
+Adjustment to outcomes
+
+  
+
+Allowing these groupings of consecutive actions to show simultaneity is
+the only change we need to make to our notion of outcomes.
+b
+ 
+
+ee eee ee
+
+Ce
+
+ 
+
+De ee eee ee ee ee ee ee
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 97/48 | - wm +) Od
+
+Adjustments to the Player Function
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+
+One reason is that the structure of histories of the game is different.
+
+Adjustments to the Player Function
+
+ 
+ 
+
+Adjustments to the Player Function
+
+The idea of a history of the game is that it is any record of actions that
+could be taken to start a play of the game, up to a certain point, but not
+necessarily to finish it.
+
+In a dynamic game of perfect information, that is simply any sequence
+of actions that appears at the beginning of an outcome.
+
+Going back to our prior example, if XYZX is an outcome of a dynamic
+game, then X, XY, and XYZ are all histories of the game (and @, of
+course).
+ 
+     
+
+Adjustment to outcomes
+
+With no simultaneous actions, an outcome is interpreted as a set of
+actions that were taken in sequence. For instance, if XYZX is an
+outcome of a dynamic game of perfect information, that means that one
+way for the game'to be played is, “the player who goes first chooses
+action X, then a player chooses action Y, then a player chooses action Z,
+then a player chooses action X, at which point the game ends.”
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function.
+
+ 
+ 
+
+ee eee ee
+
+Ce
+
+ 
+
+De ee eee ee ee ee ee ee
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 97/48 | - wm +) Od
+
+Adjustments to the Player Function
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+
+One reason is that the structure of histories of the game is different.
+
+Adjustments to the Player Function
+
+ 
+ 
+
+ee eee ee
+
+ds
+
+(om:
+
+ 
+
+De ete ee ee ee ee ee
+
+SU Rae CU RRC 8/48 |- wx + | )
+
+Adjustment to outcomes
+
+Allowing these groupings of consecutive actions to show simultaneity is
+the only change we need to make to our notion of outcomes.
+t
+
+Adjustments to the Player Function
+
+ 
+
+ne Le, ee
+
+ 
+ 
+   
+  
+
+Adjustments to the Player Function
+
+    
+ 
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+b
+
+One reason is that the structure of histories of the game is different.
+ 
+
+ee eee ee
+
+PoC Wee eee ee eee
+
+ 
+
+wee an) me ee:
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 37/48 | - we +) Od + 6
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined
+
+--the set of players
+--the set of outcomes, defined as sequences of actions that take the game from
+
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+
+ 
+
+e#om @@Q6OBBREB BC a re Wi
+ 
+
+ee eee ee
+
+ds
+
+(om:
+
+ 
+
+De ete ee ee ee ee ee
+
+SU Rae CU RRC 8/48 |- wx + | )
+
+Adjustment to outcomes
+
+Allowing these groupings of consecutive actions to show simultaneity is
+the only change we need to make to our notion of outcomes.
+t
+
+Adjustments to the Player Function
+
+ 
+
+ne Le, ee
+
+ 
+ 
+
+ee eee ee
+
+Ce
+
+ 
+
+De ee eee ee ee ee ee ee
+
+= _ Expanded Dynamic Games: Allowing for Simultaneous Moves 97/48 | - wm +) Od
+
+Adjustments to the Player Function
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+
+One reason is that the structure of histories of the game is different.
+
+Adjustments to the Player Function
+
+ 
+ 
+   
+  
+
+Adjustments to the Player Function
+
+    
+ 
+
+We also need to change the structure of the player function when the
+dynamic game allows some simultaneous moves.
+b
+
+One reason is that the structure of histories of the game is different.
+ 
+   
+
+Adjustment to outcomes
+
+  
+
+Allowing these groupings of consecutive actions to show simultaneity is
+the only change we need to make to our notion of outcomes.
+b
+ 
+
+Adjustments to the Player Function
+
+The idea of a history of the game is that it is any record of actions that
+could be taken to start a play of the game, up to a certain point, but not
+necessarily to finish it.
+
+In a dynamic game of perfect information, that is simply any sequence
+of actions that appears at the beginning of an outcome.
+
+Going back to our prior example, if XYZX is an outcome of a dynamic
+game, then X, XY, and XYZ are all histories of the game (and @, of
+course).
+ 
+
+Allowing for simultaneous moves will require us to change some of the
+formal elements that define a dynamic game.
+
+To review, a dynamic game of perfect information is defined by:
+--the set of players
+
+--the set of outcomes, defined as sequences of actions that take the game from
+its beginning to its completion
+
+--a player function, which tells us which player is making the next choice at
+any proper subhistory
+
+--players’ payoffs at each outcome
+ 
+
+A defining feature of the kind of dynamic game we’ve studied so far,
+dynamic games of perfect information, is that players’ actions are never
+taken simultaneously—all actions are sequential.
+
+We are ready to graduate to a more general concept of a dynamic game,
+in which some actions by players can be chosen simultaneously.
+
+Of course, not all actions are simultaneous, or else it would be a regular
+simultaneous-move game, not a dynamic game.
+MN
+ 
+   
+
+Expanded Dynamic Games:
+Allowing for Simultaneous
+Moves
+
+  
+ 
+     
+
+Adjustment to outcomes
+
+With no simultaneous actions, an outcome is interpreted as a set of
+actions that were taken in sequence. For instance, if XYZX is an
+outcome of a dynamic game of perfect information, that means that one
+way for the game'to be played is, “the player who goes first chooses
+action X, then a player chooses action Y, then a player chooses action Z,
+then a player chooses action X, at which point the game ends.”
+Allowing simultaneous moves will not require changing the notion of a
+player or a payoff, but will require changing the notion of an outcome
+and a player function.
+
+ 
+ 
+     
+   
+ 
+    
+
+Adjustment to outcomes
+
+With the possibility of simultaneous moves, outcomes are still lists of
+actions, and it is still true that if one action is taken before another, the
+first action appears before the second in the list. However, some actions
+in the list may have been taken simultaneously.
+
+In this case, we indicate this in our list by grouping actions taken
+simultaneously together, using some kind of notation.
+ 
+   
+
+    
+
+Adjustment to outcomes
+
+For instance, we might group actions taken simultaneously in
+parentheses.
+
+b
+
+As an example, suppose an outcome of a dynamic game is
+X(XYX)(XZ). We would interpret that as meaning, “in this outcome,
+the player who went first chose action X, with no other player choosing
+anything simultaneously; after that, three players made choices
+simultaneously, with two of those players choosing action X and the
+third choosing action Y; then two players made choices simultaneously,
+with one of them choosing action X and the other choosing action Z;
+then the game ended.”
 

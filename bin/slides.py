@@ -5,10 +5,10 @@ import time
 import imagehash
 import numpy as np
 
-# import pyautogui
+import pyautogui
 # import pyscreenshot as ImageGrab
 
-# import analyze
+import analyze
 from PIL import Image
 from moviepy.editor import *
 
@@ -97,9 +97,9 @@ class Slides:
                 selected_frames.append(crop_frames[i+1])
                 selected_hashes.append(hash[i+1])
 
-        for i, frame in enumerate(selected_frames):
-            frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
-            cv2.imwrite("media/slides/select{}.png".format(i), frame)
+        # for i, frame in enumerate(selected_frames):
+        #     frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
+        #     cv2.imwrite("media/slides/select{}.png".format(i), frame)
 
         # Ensured selected frames are not repeated
         selected_frames2 = []
@@ -126,7 +126,7 @@ class Slides:
 
         # Set slideCount to easy iteration through the slides
         self.slideCount = len(selected_frames2)
-
+        os.remove('media/slides/temp.png')
         vidObj.release()
         cv2.destroyAllWindows()
 
