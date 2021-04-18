@@ -4,7 +4,9 @@ import cv2
 import time
 import imagehash
 import numpy as np
-#import pyautogui
+
+import pyautogui
+
 import analyze
 from PIL import Image
 from moviepy.editor import *
@@ -134,7 +136,6 @@ class Slides:
         hash = []
 
         # 
-        while True:
 
 
 
