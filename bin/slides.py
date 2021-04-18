@@ -5,7 +5,7 @@ import time
 import imagehash
 import numpy as np
 
-import pyautogui
+# import pyautogui
 
 import analyze
 from PIL import Image
@@ -16,13 +16,19 @@ from moviepy.editor import *
 
 
 class Slides:
-    def __init__(self, videoPath, ):
+    def __init__(self, videoPath, cropDims):
 
         # Sets videoPath if analyzing video file - expecting None if live feed
         self.videoPath = videoPath
 
         # Contains the number of unique slides
         self.slideCount = 0
+
+        # Sets crop boundaries
+        self.x1 = cropDims[0][0]
+        self.y1 = cropDims[0][1]
+        self.x2 = cropDims[1][0]
+        self.y2 = cropDims[1][1]
         
 
     # Takes raw video file and outputs unique slides in order taken to ./media
@@ -55,10 +61,14 @@ class Slides:
         while (success):
             if (totalFrames % (frameNum) <= 1):
                 frame_list.append(frame)
-                cv2.imwrite("../media/slides/all/slide%d.png" % slideNum, frame)
-                slideNum += 1
+                # cv2.imwrite("../media/slides/all/slide%d.png" % slideNum, frame)
+                # slideNum += 1
             success, frame = vidObj.read()
             totalFrames += 1
+
+        # Crop all frames to desired dimensions
+        for i in range(len(frame_list)):
+            frame_list[i] = frame_list[i].crop((self.x1, self.y1, self.x2, self.y2))
 
         # Writes all frames to calculate each frame's image hash and appends to hash
         hash = []
@@ -183,4 +193,4 @@ class Slides:
 
 # vid = Slides("../media/test lecture.mp4")
 # vid.videoFeed()
-analyze.analyzeImages()
+# analyze.analyzeImages()
