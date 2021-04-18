@@ -43,7 +43,7 @@ def main():
     cropCoords = analyze.analyzeImages()
 
     if lectureType == '1':        
-        live = slides(path, cropCoords)
+        live = slides(None, cropCoords)
         live.liveFeed()
 
     else:

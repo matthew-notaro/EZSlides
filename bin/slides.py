@@ -5,9 +5,10 @@ import time
 import imagehash
 import numpy as np
 
-# import pyautogui
+import pyautogui
+# import pyscreenshot as ImageGrab
 
-import analyze
+# import analyze
 from PIL import Image
 from moviepy.editor import *
 
@@ -146,9 +147,11 @@ class Slides:
         hash = []
 
         # Loop and wait for a new slide
-        while True:
+        # while True:
+        #     sc = ImageGrab.grab()
 
-
+        sc = ImageGrab.grab()
+        sc.save("idk.png")
 
 
 
@@ -184,8 +187,11 @@ class Slides:
         
         # print("ending video processing...")
 
-        cv2.destroyAllWindows()
+        # cv2.destroyAllWindows()
 
 # vid = Slides("../media/test lecture.mp4")
 # vid.videoFeed()
 # analyze.analyzeImages()
+
+live = Slides(None, [[1,2],[3,4]])
+live.liveFeed()
