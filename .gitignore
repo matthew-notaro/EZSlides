@@ -1,5 +1,7 @@
 # System Files
 .DS_Store
+bin/__pycache__/*
 
 # Project Files
 media/slides/*
+media/add/*

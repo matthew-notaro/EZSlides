@@ -5,10 +5,10 @@ import time
 import imagehash
 import numpy as np
 
-import pyautogui
+# import pyautogui
 # import pyscreenshot as ImageGrab
 
-import analyze
+# import analyze
 from PIL import Image
 from moviepy.editor import *
 
@@ -74,12 +74,12 @@ class Slides:
             cv2.imwrite("media/slides/temp.png", frame_list[i])
             pilImage = Image.open("media/slides/temp.png")
             pilImage = pilImage.crop((self.x1, self.y1, self.x2, self.y2))
-            pilImage2= cv2.cvtColor(np.array(pilImage),cv2.COLOR_RGB2BGR)
-            # writing it to the disk using opencv
-            cv2.imwrite("media/all/crop%d.png" % i, pilImage2)
-            curr_hash = imagehash.average_hash(pilImage)
+
+            cvImage= cv2.cvtColor(np.array(pilImage),cv2.COLOR_RGB2BGR)
+            cv2.imwrite("media/all/crop%d.png" % i, cvImage)
+            curr_hash = imagehash.average_hash(Image.open("media/all/crop%d.png" % i))
             
-            crop_frames.append(pilImage)
+            crop_frames.append(cvImage)
             hash.append(curr_hash)
 
         # Store frames with enough change from previous frame in selected_frames
@@ -92,14 +92,14 @@ class Slides:
             next_hash = hash[i + 1]
 
             # If different from previous, appends to selected_frame
-            if (abs(curr_hash - next_hash) != 0):
+            if (abs(curr_hash - next_hash) >= 5):
                 print("i = %d, diff = %d" % (i, abs(curr_hash - next_hash)))
-                selected_frames.append(frame_list[i+1])
+                selected_frames.append(crop_frames[i+1])
                 selected_hashes.append(hash[i+1])
 
         for i, frame in enumerate(selected_frames):
             frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
-            cv2.imwrite("media/slides/{}.png".format(i), frame)
+            cv2.imwrite("media/slides/select{}.png".format(i), frame)
 
         # Ensured selected frames are not repeated
         selected_frames2 = []
@@ -109,8 +109,9 @@ class Slides:
             
             for j in range(i-1, -1, -1):
                 prev_hash = selected_hashes[j]
-                print(abs(curr_hash - next_hash), i, j)
-                if abs(curr_hash - next_hash) == 0:
+                hash_diff = curr_hash - prev_hash
+                print(abs(hash_diff), i, j)
+                if abs(hash_diff) == 0:
                     uniqueSlide = False
                     print("repeat found: ", i, j)
                     break
@@ -121,7 +122,7 @@ class Slides:
 
         for i, frame in enumerate(selected_frames2):
             frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
-            cv2.imwrite("media/slides/select2{}.png".format(i), frame)
+            cv2.imwrite("media/slides/selectFINAL{}.png".format(i), frame)
 
         # Set slideCount to easy iteration through the slides
         self.slideCount = len(selected_frames2)
@@ -179,18 +180,8 @@ class Slides:
             time.sleep(delay)
 
 
-# vid = Slides("media/test lecture.mp4", [[1,2],[3,4]])
-# vid.videoFeed()
-
 # live = Slides(None, [[1,2],[3,4]])
 # live.liveFeed()
 
-
-# x1 = int((int(4)/(1900/200))*1900)
-# x2 = int((int(10)/(1900/200))*1900)
-# y1 = int((int(4)/(1000/150))*1000)
-# y2 = int((int(9)/(1000/150))*1000)
-
-
-# vid = Slides("media/test lecture.mp4", [[x1,y1],[x2,y2]])
+# vid = Slides("media/test lecture.mp4", [[400,300],[1400,899]])
 # vid.videoFeed()
