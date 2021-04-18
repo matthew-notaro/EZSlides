@@ -40,8 +40,6 @@ def main():
             print("Invalid input. Try again.")
             outputChoice = input("Enter 1 or 2: ")
 
-    
-
     if lectureType == '1':
         image = pyautogui.screenshot()
         image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
@@ -55,8 +53,6 @@ def main():
         vid = slides(path, cropCoords)
         vid.videoFeed()
         analyze.analyzeImages()
-
-       
 
 
     #result = slides.liveFeed() if lectureType == '1' else slides.videoFeed()
