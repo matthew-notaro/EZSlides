@@ -67,21 +67,21 @@ class Slides:
             success, frame = vidObj.read()
             totalFrames += 1
 
-        # Crop all frames to desired dimensions
-        for i in range(len(frame_list)):
-            frame_list[i] = frame_list[i].crop((self.x1, self.y1, self.x2, self.y2))
-
         # Writes all frames to calculate each frame's image hash and appends to hash
         hash = []
+        crop_frames = []
         for i in range(len(frame_list)):
             cv2.imwrite("../media/slides/temp.png", frame_list[i])
-            curr_hash = imagehash.average_hash(Image.open("../media/slides/temp.png"))
+            pilImage = Image.open("../media/slides/temp.png")
+            pilImage = pilImage.crop((self.x1, self.y1, self.x2, self.y2))
+            curr_hash = imagehash.average_hash(pilImage)
             
+            crop_frames.append(pilImage)
             hash.append(curr_hash)
 
         # Store frames with enough change from previous frame in selected_frames
         # Start with frame_list[0] - append the next, not the current
-        selected_frames = [frame_list[0]]
+        selected_frames = [crop_frames[0]]
         selected_hashes = [hash[0]]
 
         for i in range(len(hash) - 1):
@@ -91,7 +91,7 @@ class Slides:
             # If different from previous, appends to selected_frame
             if (abs(curr_hash - next_hash) != 0):
                 print("i = %d, diff = %d" % (i, abs(curr_hash - next_hash)))
-                selected_frames.append(frame_list[i+1])
+                selected_frames.append(crop_frames[i+1])
                 selected_hashes.append(hash[i+1])
 
         # for i, frame in enumerate(selected_frames):
@@ -117,6 +117,7 @@ class Slides:
                 selected_frames2.append(selected_frames[i])
 
         for i, frame in enumerate(selected_frames2):
+            frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
             cv2.imwrite("../media/slides/select2{}.png".format(i), frame)
 
         # Set slideCount to easy iteration through the slides
@@ -146,11 +147,11 @@ class Slides:
         while True:
             # Take screenshot, convert, and crop
             image = pyautogui.screenshot()
-            image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-            #image = image.crop((self.x1, self.y1, self.x2, self.y2))
+            # image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+            image = image.crop((self.x1, self.y1, self.x2, self.y2))
    
             # Write sc to the disk to hash it
-            cv2.imwrite("media/live/temp.png", image)
+            # cv2.imwrite("media/live/temp.png", image)
             curr_hash = imagehash.average_hash(Image.open("../media/live/temp.png"))
 
             # Compare to previous sc's - backwards iteration
@@ -171,8 +172,8 @@ class Slides:
             time.sleep(delay)
 
 
-# vid = Slides("../media/test lecture.mp4", [[1,2],[3,4]])
-# vid.videoFeed()
+vid = Slides("../media/test lecture.mp4", [[4,4],[10,9]])
+vid.videoFeed()
 
-live = Slides(None, [[1,2],[3,4]])
-live.liveFeed()
+# live = Slides(None, [[1,2],[3,4]])
+# live.liveFeed()
