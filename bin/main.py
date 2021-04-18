@@ -19,7 +19,7 @@ def main():
         elif(lectureType == '2'):
             print("EZSlides will capture from the video file.")
             while True:
-                path = input("Please enter a valid video path.")
+                path = input("Please enter a valid video path: ")
                 if os.path.isfile(path):
                     break
             break

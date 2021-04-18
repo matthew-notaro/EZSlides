@@ -178,10 +178,3 @@ class Slides:
             
             # Take a screenshot every X seconds
             time.sleep(delay)
-
-
-# live = Slides(None, [[1,2],[3,4]])
-# live.liveFeed()
-
-# vid = Slides("media/test lecture.mp4", [[400,300],[1400,899]])
-# vid.videoFeed()

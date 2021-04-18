@@ -1,7 +1,10 @@
 # System Files
 .DS_Store
 bin/__pycache__/*
+.vscode
 
 # Project Files
 media/slides/*
-media/add/*
+media/all/*
+media/live/*
+result.txt
