@@ -1,3 +1,26 @@
+ 
+
+bo
+u
+@
+J
+Fl
+p
+|
+E
+Cy
+C
+a
+&
+
+ 
+
+ee eer re ay Pete er ee ene
+
+Expanded Dynamic Games: Allowing for Simultaneous Moves 7/48 | - wx +) O
+
+Adjustment to outcomes
+
 For instance, we might group actions taken simultaneously in
 parentheses.
 
@@ -9,6 +32,12 @@ simultaneously, with two of those players choosing action X and the
 third choosing action Y; then two players made choices simultaneously,
 with one of them choosing action X and the other choosing action Z;
 then the game ended.”
+
+Adjustment to outcomes
+
+J
+
+ 
 
  
 

@@ -40,7 +40,7 @@ def main():
             print("Invalid input. Try again.")
             outputChoice = input("Enter 1 or 2: ")
 
-    cropCoords = analyze.analyzeImages()
+    cropCoords = analyze.getCoordinates()
 
     if lectureType == '1':        
         live = slides(None, cropCoords)
@@ -49,7 +49,7 @@ def main():
     else:
         vid = slides(path, cropCoords)
         vid.videoFeed()
-        analyze.
+        analyze.analyzeImages()
 
 
     #result = slides.liveFeed() if lectureType == '1' else slides.videoFeed()
