@@ -1,7 +1,7 @@
 # EZSlides
 
 ## Inspiration
-Have you ever taken a class where your professor speeds through slideshows without stopping? Do your professors ever present you with walls of text, without any time to copy it down? Taking word-for-word notes can be difficult in an online environment, especially through the lenses of accessibility. If only there were a way to automatically copy what's already there, without the hassle of filtering which information is relevant or rushing to finish typing.
+Have you ever taken a class where your professor speeds through slideshows without stopping? Do your professors ever present you with walls of text, without any time to copy them down? Taking word-for-word notes can be difficult in an online environment, especially through the lenses of accessibility. If only there were a way to automatically copy what's already there, without the hassle of filtering which information is relevant or rushing to finish typing.
 
 ## What it does
 EZSlides is a program that processes either pre-recorded or live lectures and extracts the text from the video or screen for you to include in your notes! Simply crop the video to just include the text or select a region of your screen to record. You can even save the output to a text file or copy each slide directly to your clipboard to seamlessly paste into your favorite editor. As a result, online learning is made more accessible, efficient, and convenient to all.
