@@ -62,7 +62,7 @@ class Slides:
         while (success):
             if (totalFrames % (frameNum) <= 1):
                 frame_list.append(frame)
-                # cv2.imwrite("../media/slides/all/slide%d.png" % slideNum, frame)
+                # cv2.imwrite("media/slides/all/slide%d.png" % slideNum, frame)
                 # slideNum += 1
             success, frame = vidObj.read()
             totalFrames += 1
@@ -71,12 +71,15 @@ class Slides:
         hash = []
         crop_frames = []
         for i in range(len(frame_list)):
-            cv2.imwrite("../media/slides/temp.png", frame_list[i])
-            pilImage = Image.open("../media/slides/temp.png")
+            cv2.imwrite("media/slides/temp.png", frame_list[i])
+            pilImage = Image.open("media/slides/temp.png")
             pilImage = pilImage.crop((self.x1, self.y1, self.x2, self.y2))
-            curr_hash = imagehash.average_hash(pilImage)
+
+            cvImage= cv2.cvtColor(np.array(pilImage),cv2.COLOR_RGB2BGR)
+            cv2.imwrite("media/all/crop%d.png" % i, cvImage)
+            curr_hash = imagehash.average_hash(Image.open("media/all/crop%d.png" % i))
             
-            crop_frames.append(pilImage)
+            crop_frames.append(cvImage)
             hash.append(curr_hash)
 
         # Store frames with enough change from previous frame in selected_frames
@@ -89,14 +92,14 @@ class Slides:
             next_hash = hash[i + 1]
 
             # If different from previous, appends to selected_frame
-            if (abs(curr_hash - next_hash) != 0):
+            if (abs(curr_hash - next_hash) >= 5):
                 print("i = %d, diff = %d" % (i, abs(curr_hash - next_hash)))
                 selected_frames.append(crop_frames[i+1])
                 selected_hashes.append(hash[i+1])
 
-        # for i, frame in enumerate(selected_frames):
-        #     cv2.imwrite("../media/slides/{}.png".format(i), frame)
-        
+        for i, frame in enumerate(selected_frames):
+            frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
+            cv2.imwrite("media/slides/select{}.png".format(i), frame)
 
         # Ensured selected frames are not repeated
         selected_frames2 = []
@@ -106,8 +109,9 @@ class Slides:
             
             for j in range(i-1, -1, -1):
                 prev_hash = selected_hashes[j]
-                print(abs(curr_hash - next_hash), i, j)
-                if abs(curr_hash - next_hash) == 0:
+                hash_diff = curr_hash - prev_hash
+                print(abs(hash_diff), i, j)
+                if abs(hash_diff) == 0:
                     uniqueSlide = False
                     print("repeat found: ", i, j)
                     break
@@ -118,7 +122,7 @@ class Slides:
 
         for i, frame in enumerate(selected_frames2):
             frame = cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR)
-            cv2.imwrite("../media/slides/select2{}.png".format(i), frame)
+            cv2.imwrite("media/slides/selectFINAL{}.png".format(i), frame)
 
         # Set slideCount to easy iteration through the slides
         self.slideCount = len(selected_frames2)
@@ -134,7 +138,7 @@ class Slides:
     def liveFeed(self):
         
         # Delay between screenshots (in seconds)
-        delay = 2
+        delay = 5
 
         # Lists to keep track of seen frames and respective hashes
         sc_list = []
@@ -147,18 +151,20 @@ class Slides:
         while True:
             # Take screenshot, convert, and crop
             image = pyautogui.screenshot()
+            print("shot bam bam")
             # image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
             image = image.crop((self.x1, self.y1, self.x2, self.y2))
    
             # Write sc to the disk to hash it
-            # cv2.imwrite("media/live/temp.png", image)
-            curr_hash = imagehash.average_hash(Image.open("../media/live/temp.png"))
+            # cv2.imwrite("media/live/temp.png", image)   Image.open("media/live/temp.png")
+            curr_hash = imagehash.average_hash(image)
+            print("hashy")
 
             # Compare to previous sc's - backwards iteration
             uniqueSC = True
             for i in range(sc_num - 1, -1, -1):
                 # If found matching slide, 
-                if(abs(curr_hash - hash[i]) == 0)
+                if(abs(curr_hash - hash[i]) == 0):
                     uniqueSC = False
                     break
             
@@ -166,14 +172,16 @@ class Slides:
             if uniqueSC:
                 sc_list.append(image)
                 hash.append(curr_hash)
+                analyze.analyzeImage(image)
+                print("a d d")
                 sc_num += 1
             
             # Take a screenshot every X seconds
             time.sleep(delay)
 
 
-vid = Slides("../media/test lecture.mp4", [[4,4],[10,9]])
-vid.videoFeed()
-
 # live = Slides(None, [[1,2],[3,4]])
 # live.liveFeed()
+
+# vid = Slides("media/test lecture.mp4", [[400,300],[1400,899]])
+# vid.videoFeed()

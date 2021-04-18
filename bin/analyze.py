@@ -7,38 +7,77 @@ from PIL import Image
 x1, y1, x2, y2 = 0, 0, 0, 0
 toFile = True
 path = 'bin/test.jpg'
+dir = 'media'
 slidesDir = 'media/slides'
 image = cv2.imread(path,0)
 
 # Prompts user to crop first available screenshot based on overlaid grid
+def getVideoCoordinates():
+    global path, image
+   # for imagePath in os.listdir(slidesDir):
+    imagePath = '/prelim.png'
+    path = os.path.join(slidesDir, imagePath)
+    isFirst = False
+    print(path)
+    image = cv2.imread(path,0)
+    GRID_SIZE_W = 200
+    GRID_SIZE_H = 150
+    height, width = image.shape
+    for x in range(0, width -1, GRID_SIZE_W):
+        cv2.line(image, (x, 0), (x, height), (255, 0, 0), 5)
+    for x in range(0, height -1, GRID_SIZE_H):
+        cv2.line(image, (0, x), (width, x), (255, 0, 0), 5)
+    cv2.imshow("IMAGE", image)
+    k = cv2.waitKey(0) & 0xFF
+    if k == ord('c'):
+        x1 = input("x1? ")
+        x2 = input("x2? ")
+        y1 = input("y1? ")
+        y2 = input("y2? ")
+
+        x1 = int((int(x1)/(width/GRID_SIZE_W))*width)
+        x2 = int((int(x2)/(width/GRID_SIZE_W))*width)
+        y1 = int((int(y1)/(height/GRID_SIZE_H))*height)
+        y2 = int((int(y2)/(height/GRID_SIZE_H))*height)
+
+        coordinates = [(x1, y1), (x2, y2)]
+        cv2.destroyAllWindows()
+
+        return coordinates
+
 def getCoordinates():
     global path, image
-    for imagePath in os.listdir(slidesDir):
-        path = os.path.join(slidesDir, imagePath)
-        isFirst = False
-        image = cv2.imread(path,0)
-        GRID_SIZE_W = 200
-        GRID_SIZE_H = 150
-        height, width = image.shape
-        for x in range(0, width -1, GRID_SIZE_W):
-            cv2.line(image, (x, 0), (x, height), (255, 0, 0), 5)
-        for x in range(0, height -1, GRID_SIZE_H):
-            cv2.line(image, (0, x), (width, x), (255, 0, 0), 5)
-        cv2.imshow("IMAGE", image)
-        k = cv2.waitKey(0) & 0xFF
-        if k == ord('c'):
-            x1 = input("x1? ")
-            x2 = input("x2? ")
-            y1 = input("y1? ")
-            y2 = input("y2? ")
+    # for imagePath in os.listdir(liveDir):
+    path = 'media/prelim.png'
+    isFirst = False
+    print(path)
+    image = cv2.imread(path,0)
+    GRID_SIZE_W = 200
+    GRID_SIZE_H = 150
+    height, width = image.shape
+    for x in range(0, width -1, GRID_SIZE_W):
+        cv2.line(image, (x, 0), (x, height), (255, 0, 0), 5)
+    for x in range(0, height -1, GRID_SIZE_H):
+        cv2.line(image, (0, x), (width, x), (255, 0, 0), 5)
+    cv2.imshow("IMAGE", image)
 
-            x1 = int((int(x1)/(width/GRID_SIZE_W))*width)
-            x2 = int((int(x2)/(width/GRID_SIZE_W))*width)
-            y1 = int((int(y1)/(height/GRID_SIZE_H))*height)
-            y2 = int((int(y2)/(height/GRID_SIZE_H))*height)
+    k = cv2.waitKey(0) & 0xFF
+    if k == ord('c'):
+        x1 = input("x1? ")
+        x2 = input("x2? ")
+        y1 = input("y1? ")
+        y2 = input("y2? ")
 
-            coordinates = [(x1, y1), (x2, y2)]
-            return coordinates
+        x1 = int((int(x1)/(width/GRID_SIZE_W))*width)
+        x2 = int((int(x2)/(width/GRID_SIZE_W))*width)
+        y1 = int((int(y1)/(height/GRID_SIZE_H))*height)
+        y2 = int((int(y2)/(height/GRID_SIZE_H))*height)
+
+        coordinates = [(x1, y1), (x2, y2)]
+        # cv2.destroyAllWindows()
+        return coordinates
+    else:
+        print("ERROR")
 
 # Loops through all images in /slides
 def analyzeImages():
@@ -55,8 +94,8 @@ def analyzeImage(img):
 
     result = pytesseract.image_to_string(img)   
     if toFile:
-        with open('result.txt', mode ='w') as file:    
-        #with open('result.txt', 'a') as file:      
+        # with open('result.txt', mode ='w') as file:    
+        with open('result.txt', 'a') as file:      
             file.write(result)      
     else:
         pyperclip.copy(result)
