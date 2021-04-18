@@ -5,10 +5,10 @@ import time
 import imagehash
 import numpy as np
 
-# import pyautogui
+import pyautogui
 # import pyscreenshot as ImageGrab
 
-# import analyze
+import analyze
 from PIL import Image
 from moviepy.editor import *
 
@@ -62,7 +62,7 @@ class Slides:
         while (success):
             if (totalFrames % (frameNum) <= 1):
                 frame_list.append(frame)
-                # cv2.imwrite("../media/slides/all/slide%d.png" % slideNum, frame)
+                # cv2.imwrite("media/slides/all/slide%d.png" % slideNum, frame)
                 # slideNum += 1
             success, frame = vidObj.read()
             totalFrames += 1
@@ -74,8 +74,8 @@ class Slides:
         # Writes all frames to calculate each frame's image hash and appends to hash
         hash = []
         for i in range(len(frame_list)):
-            cv2.imwrite("../media/slides/temp.png", frame_list[i])
-            curr_hash = imagehash.average_hash(Image.open("../media/slides/temp.png"))
+            cv2.imwrite("media/slides/temp.png", frame_list[i])
+            curr_hash = imagehash.average_hash(Image.open("media/slides/temp.png"))
             
             hash.append(curr_hash)
 
@@ -95,7 +95,7 @@ class Slides:
                 selected_hashes.append(hash[i+1])
 
         # for i, frame in enumerate(selected_frames):
-        #     cv2.imwrite("../media/slides/{}.png".format(i), frame)
+        #     cv2.imwrite("media/slides/{}.png".format(i), frame)
         
 
         # Ensured selected frames are not repeated
@@ -117,7 +117,7 @@ class Slides:
                 selected_frames2.append(selected_frames[i])
 
         for i, frame in enumerate(selected_frames2):
-            cv2.imwrite("../media/slides/select2{}.png".format(i), frame)
+            cv2.imwrite("media/slides/select2{}.png".format(i), frame)
 
         # Set slideCount to easy iteration through the slides
         self.slideCount = len(selected_frames2)
@@ -146,18 +146,20 @@ class Slides:
         while True:
             # Take screenshot, convert, and crop
             image = pyautogui.screenshot()
+            print("shot bam bam")
             image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
             #image = image.crop((self.x1, self.y1, self.x2, self.y2))
    
             # Write sc to the disk to hash it
             cv2.imwrite("media/live/temp.png", image)
-            curr_hash = imagehash.average_hash(Image.open("../media/live/temp.png"))
+            curr_hash = imagehash.average_hash(Image.open("media/live/temp.png"))
+            print("hashy")
 
             # Compare to previous sc's - backwards iteration
             uniqueSC = True
             for i in range(sc_num - 1, -1, -1):
                 # If found matching slide, 
-                if(abs(curr_hash - hash[i]) == 0)
+                if(abs(curr_hash - hash[i]) == 0):
                     uniqueSC = False
                     break
             
@@ -165,13 +167,15 @@ class Slides:
             if uniqueSC:
                 sc_list.append(image)
                 hash.append(curr_hash)
+                analyze.analyzeImage(image)
+                print("a d d")
                 sc_num += 1
             
             # Take a screenshot every X seconds
             time.sleep(delay)
 
 
-# vid = Slides("../media/test lecture.mp4", [[1,2],[3,4]])
+# vid = Slides("media/test lecture.mp4", [[1,2],[3,4]])
 # vid.videoFeed()
 
 live = Slides(None, [[1,2],[3,4]])

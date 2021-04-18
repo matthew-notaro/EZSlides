@@ -17,7 +17,7 @@ def main():
             print("NAME will capture from the video file.")
             while True:
                 path = input("Please enter a valid video path.")
-                if os.path.isfile(path)
+                if os.path.isfile(path):
                     break
             break
         else:
@@ -40,16 +40,23 @@ def main():
             print("Invalid input. Try again.")
             outputChoice = input("Enter 1 or 2: ")
 
-    cropCoords = analyze.getCoordinates()
+    
 
-    if lectureType == '1':        
+    if lectureType == '1':
+        image = pyautogui.screenshot()
+        image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
+        cv2.imwrite("media/slides/prelim.png", image)
+        cropCoords = analyze.getLiveCoordinates()        
         live = slides(None, cropCoords)
         live.liveFeed()
 
     else:
+        cropCoords = analyze.getVideoCoordinates()
         vid = slides(path, cropCoords)
         vid.videoFeed()
         analyze.analyzeImages()
+
+       
 
 
     #result = slides.liveFeed() if lectureType == '1' else slides.videoFeed()
