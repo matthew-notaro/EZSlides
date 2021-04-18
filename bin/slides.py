@@ -175,12 +175,6 @@ class Slides:
 
         cv2.destroyAllWindows()
 
-# def analyzeImages():
-#     for imagePath in os.listdir(slidesDir):
-#         pathFromSlides = os.path.join(slidesDir, imagePath)
-#         imageFromSlides = cv2.imread(path,0)
-#         analyze.selectPixels(pathFromSlides, imageFromSlides)
-
 # vid = Slides("../media/test lecture.mp4")
 # vid.videoFeed()
 analyze.analyzeImages()
