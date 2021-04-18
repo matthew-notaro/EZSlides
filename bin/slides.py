@@ -4,7 +4,7 @@ import cv2
 import time
 import imagehash
 import numpy as np
-import pyautogui
+#import pyautogui
 
 from PIL import Image
 from moviepy.editor import *
@@ -25,7 +25,8 @@ class Slides:
 
     # Takes raw video file and outputs unique slides in order taken to ./media
     def videoFeed(self):
-        
+        print("in vidfeed")
+
         # Make sure videoPath != None
         if self.videoPath is None:
             print("something's wrong I can feel it")
@@ -43,48 +44,69 @@ class Slides:
         # Counters
         slideNum = 1                # tracks unique slide number
         frameNum = fps * delay      # tracks frames read up to the fps, set to fps * delay to immediately take screenshot 
+        totalFrames = 0             # track total number of frames read for debugging 
 
         # Frame extractor loop
         while True:
             # Reads in the next frame
             success, frame = vidObj.read()
 
+            # Max X slides, X/10 seconds for testing
+            # if totalFrames > 200:
+            #     break
+
             if success:
                 # frameNum has met minimum threshold
                 if frameNum >= (fps * delay):
+                    print("total frames: %d" % totalFrames)
                     # Reset frame number
                     frameNum = 0
 
                     # Save current frame and hash it
                     cv2.imwrite("../media/slides/slide%d.jpg" % slideNum, frame)
+
                     hashCurr = imagehash.average_hash(Image.open("../media/slides/slide%d.jpg" % (slideNum)))
 
                     # Compare current frame to previous slides to check for repeats
                     temp = slideNum - 1
+                    uniqueSlide = True
                     while temp >= 1:
+                        
                         hashIter = imagehash.average_hash(Image.open("../media/slides/slide%d.jpg" % (temp)))
-
-                        # If different slide, move onto previous slide
-                        if (hashCurr - hashIter) >= 5:
-                            temp -= 1
-
+                        print("hash diff: %d - %d = %d" % (slideNum, temp, (hashCurr - hashIter)))
+                        
                         # If repeated slide, delete current slide and read in next one
-                        else:
-                            os.remove("../media/slides/slide%d.jpg" % (slideNum))
+                        if (hashCurr - hashIter) is 0:
+                            print("repeated. same as slide: %d" % temp)
+
+                            # Slide 4 still slips thru
+                            if os.path.isfile("../media/slides/slide%d.jpg" % slideNum):
+                                print("deleting file: %d" % slideNum)
+                                os.remove("../media/slides/slide%d.jpg" % (slideNum))
+                            uniqueSlide = False
                             break
+                        
+                        # If different slide, move onto previous slide
+                        temp -= 1
                     
-                    # If current slide if unique, inc slideNum
-                    if temp is 1:
+                    # If current slide if unique, increment slideNum
+                    if uniqueSlide:
                         slideNum += 1
+                        print("slide num inc to %d" %slideNum)
 
 
                 frameNum += 1
+                totalFrames += 1
             
             # Reached end of file
             else:
+                print("EOF")
                 break
         
-        print("ending video processing...")
+        # Set slideCount to easy iteration through the slides
+        self.slideCount = slideNum
+        
+        print("done")
 
         vidObj.release()
         cv2.destroyAllWindows()
@@ -112,8 +134,8 @@ class Slides:
         # Frame extractor loop
         while True:
             # Takes next screenshot and converts to writable format
-            sc = pyautogui.screenshot()
-            sc = cv2.cvtColor(np.array(sc), cv2.COLOR_RGB2BGR)
+            #sc = pyautogui.screenshot()
+            #sc = cv2.cvtColor(np.array(sc), cv2.COLOR_RGB2BGR)
 
             # Save current sc to disk and hash it
             cv2.imwrite("../media/slides/slide%d.jpg" % slideNum, sc)
@@ -142,6 +164,7 @@ class Slides:
 
         cv2.destroyAllWindows()
 
-def main():
-    vid = Slides("../media/test lecture.mp4")
-    vid.videoFeed()
+
+
+vid = Slides("../media/test lecture.mp4")
+vid.videoFeed()
