@@ -42,9 +42,12 @@ def analyzeImages():
                 x2 = int((int(x2)/(width/GRID_SIZE_W))*width)
                 y1 = int((int(y1)/(height/GRID_SIZE_H))*height)
                 y2 = int((int(y2)/(height/GRID_SIZE_H))*height)
+
+                coordinates = [(x1, y1), (x2, y2)]
+                return coordinates
             
-        croppedImg = Image.open(path).crop((x1, y1, x2, y2))
-        analyzeImage(croppedImg)            
+        # croppedImg = Image.open(path).crop((x1, y1, x2, y2))
+        # analyzeImage(croppedImg)            
 
 def selectPixels():
     global path, image, imageCopy
